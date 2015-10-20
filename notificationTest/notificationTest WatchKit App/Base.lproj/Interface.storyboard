@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8092"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="notificationTest_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <button width="1" alignment="left" title="Heartbeat" id="MUk-w6-e6h">
+                            <color key="backgroundColor" red="1" green="0.0" blue="0.4309981497" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="20"/>
+                            <connections>
+                                <segue destination="q2u-Gw-h5y" kind="push" id="8sb-it-kF9"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Med Schedule" id="NQ1-Os-cvS">
+                            <color key="backgroundColor" red="0.0" green="0.62745098040000002" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="20"/>
+                            <connections>
+                                <segue destination="GaI-K3-nNj" kind="push" id="4q1-Pl-Q1v"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="235" y="347"/>
+        </scene>
+        <!--heartBeat-->
+        <scene sceneID="FwR-xq-f0f">
+            <objects>
+                <controller hidesWhenLoading="NO" id="q2u-Gw-h5y" userLabel="heartBeat">
+                    <items>
+                        <imageView width="0.5" height="0.5" alignment="center" id="ma8-Ck-O0I"/>
+                        <label width="136" height="24" alignment="center" verticalAlignment="bottom" text="80" textAlignment="center" numberOfLines="0" id="2Wp-3v-NbB">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="466" y="220"/>
+        </scene>
+        <!--medSchedule-->
+        <scene sceneID="GpV-ac-XTF">
+            <objects>
+                <controller hidesWhenLoading="NO" id="GaI-K3-nNj" userLabel="medSchedule">
+                    <items>
+                        <dateLabel alignment="left" id="V9u-Ib-ZK7">
+                            <dateFormatterStyle key="dateStyle" short="YES"/>
+                            <dateFormatterStyle key="timeStyle" short="YES"/>
+                        </dateLabel>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="466" y="471"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="BOz-TT-tkC">
+            <objects>
+                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModule="notificationTest_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group alignment="left" id="t8f-Gd-c4y"/>
+                        <group alignment="left" id="uCw-4Q-Ouw"/>
+                    </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="235" y="672"/>
+        </scene>
+        <!--stethoscope-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController backgroundImage="stethoscope" id="YCC-NB-fut">
+                    <items>
+                        <label width="136" height="50" alignment="center" text="Alert Label" textAlignment="center" numberOfLines="5" id="XkS-y5-khE">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="heartRate" id="JfB-70-Muf"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.43099814967105265" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="XkS-y5-khE" id="49B-RR-99y"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="235" y="1001"/>
+        </scene>
+        <!--blue-pill-->
+        <scene sceneID="K0B-wZ-NWU">
+            <objects>
+                <notificationController backgroundImage="blue-pill" hidesWhenLoading="NO" id="lxU-lv-ZLI">
+                    <items>
+                        <label width="136" height="50" alignment="center" text="Alert Label" textAlignment="center" numberOfLines="5" id="ZeR-c0-Kts"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="takeMedicine" id="GvB-o5-4GC"/>
+                    <color key="backgroundColor" red="0.0" green="0.62745098039215685" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="ZeR-c0-Kts" id="aOj-CC-Osd"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="234" y="1213"/>
+        </scene>
+    </scenes>
+</document>

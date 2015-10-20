@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9046" systemVersion="14F27" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9013"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="acc_gyro_HB_Test_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="SYx-p0-dmg">
+                            <items>
+                                <button width="0.5" height="1" alignment="left" title="Heart Beat" id="j78-60-Nrd">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                    <connections>
+                                        <segue destination="3Z3-Pq-WZm" kind="push" id="9yx-Yb-brj"/>
+                                    </connections>
+                                </button>
+                                <button width="0.5" height="1" alignment="left" title="Motion Readings" id="d50-K9-ymH">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                    <connections>
+                                        <segue destination="aIS-Zh-Ck7" kind="push" id="eEL-Nd-LN7"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--Health Heart Rate Controller-->
+        <scene sceneID="3bK-rp-iPq">
+            <objects>
+                <controller hidesWhenLoading="NO" id="3Z3-Pq-WZm" customClass="HealthHeartRateController" customModule="acc_gyro_HB_Test_WatchKit_Extension">
+                    <items>
+                        <label height="20" alignment="center" text="Device Name" id="nl3-x9-QCz"/>
+                        <group width="1" alignment="left" id="wGg-yz-f8t">
+                            <items>
+                                <label width="37" height="38" alignment="left" text="---" textAlignment="center" minimumScaleFactor="0.20000000000000001" id="emT-XR-hCK">
+                                    <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                </label>
+                                <imageView width="25" height="25" alignment="center" verticalAlignment="center" image="heart" id="S98-mq-KcE">
+                                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </imageView>
+                                <label width="37" height="38" alignment="right" text="BPM Aim" textAlignment="center" numberOfLines="2" id="qwC-fT-bHs">
+                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="8"/>
+                                </label>
+                            </items>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </group>
+                        <button width="1" alignment="left" title="Start" id="Qk5-pg-1kM">
+                            <connections>
+                                <action selector="startBtnTapped" destination="3Z3-Pq-WZm" id="lI0-n1-5BF"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Stop" id="kCc-hT-zHK">
+                            <connections>
+                                <action selector="stopBtnTapped" destination="3Z3-Pq-WZm" id="6Xd-rT-ebA"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="bpm" destination="qwC-fT-bHs" id="cJe-RS-aJP"/>
+                        <outlet property="deviceLabel" destination="nl3-x9-QCz" id="mWP-Vr-hQB"/>
+                        <outlet property="heart" destination="S98-mq-KcE" id="ZCU-YL-m5W"/>
+                        <outlet property="label" destination="emT-XR-hCK" id="cst-IF-CeR"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="468" y="240"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="806"/>
+        </scene>
+        <!--Motion Readings Controller-->
+        <scene sceneID="9k6-P9-J4R">
+            <objects>
+                <controller hidesWhenLoading="NO" id="aIS-Zh-Ck7" customClass="MotionReadingsController" customModule="acc_gyro_HB_Test_WatchKit_Extension">
+                    <items>
+                        <label height="0.40000000000000002" alignment="left" text="Label" textAlignment="left" numberOfLines="5" id="pNr-ec-BoJ"/>
+                        <label height="0.29999999999999999" alignment="left" text="Label" numberOfLines="5" id="BJf-sl-ru4"/>
+                    </items>
+                    <connections>
+                        <outlet property="lbl_accel" destination="pNr-ec-BoJ" id="y6m-ps-qqW"/>
+                        <outlet property="lbl_gyro" destination="BJf-sl-ru4" id="gGX-kN-Ith"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="468" y="453"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="acc_gyro_HB_Test_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="806"/>
+        </scene>
+    </scenes>
+</document>

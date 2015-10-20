@@ -1,0 +1,618 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C0493E61BA9F39E003145D2 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0493E51BA9F39E003145D2 /* InterfaceController.swift */; };
+		1CD0A5D31BA753FB00F6AC33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD0A5D21BA753FB00F6AC33 /* AppDelegate.swift */; };
+		1CD0A5D51BA753FB00F6AC33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD0A5D41BA753FB00F6AC33 /* ViewController.swift */; };
+		1CD0A5D81BA753FB00F6AC33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CD0A5D61BA753FB00F6AC33 /* Main.storyboard */; };
+		1CD0A5DA1BA753FB00F6AC33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CD0A5D91BA753FB00F6AC33 /* Assets.xcassets */; };
+		1CD0A5DD1BA753FB00F6AC33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CD0A5DB1BA753FB00F6AC33 /* LaunchScreen.storyboard */; };
+		1CD0A5E21BA753FB00F6AC33 /* acc_gyro_HB_Test WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1CD0A5E11BA753FB00F6AC33 /* acc_gyro_HB_Test WatchKit App.app */; };
+		1CD0A5E81BA753FB00F6AC33 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CD0A5E61BA753FB00F6AC33 /* Interface.storyboard */; };
+		1CD0A5EA1BA753FB00F6AC33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CD0A5E91BA753FB00F6AC33 /* Assets.xcassets */; };
+		1CD0A5F11BA753FB00F6AC33 /* acc_gyro_HB_Test WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1CD0A5F01BA753FB00F6AC33 /* acc_gyro_HB_Test WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1CD0A5F81BA753FB00F6AC33 /* MotionReadings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD0A5F71BA753FB00F6AC33 /* MotionReadings.swift */; };
+		1CD0A5FA1BA753FB00F6AC33 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD0A5F91BA753FB00F6AC33 /* ExtensionDelegate.swift */; };
+		1CD0A5FC1BA753FB00F6AC33 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD0A5FB1BA753FB00F6AC33 /* NotificationController.swift */; };
+		1CD0A5FE1BA753FB00F6AC33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CD0A5FD1BA753FB00F6AC33 /* Assets.xcassets */; };
+		1CEAACBF1BA9AE050075A53A /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEAACBE1BA9AE050075A53A /* HealthManager.swift */; };
+		1CEAACC11BA9D0010075A53A /* HealthHeartRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEAACC01BA9D0010075A53A /* HealthHeartRate.swift */; };
+		1CEED47A1BA86F6F00B75817 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CEED4791BA86F6F00B75817 /* HealthKit.framework */; };
+		1CEED47D1BA8708100B75817 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CEED47C1BA8708100B75817 /* HealthKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1CD0A5E31BA753FB00F6AC33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1CD0A5C71BA753FB00F6AC33 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1CD0A5E01BA753FB00F6AC33;
+			remoteInfo = "acc_gyro_HB_Test WatchKit App";
+		};
+		1CD0A5F21BA753FB00F6AC33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1CD0A5C71BA753FB00F6AC33 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1CD0A5EF1BA753FB00F6AC33;
+			remoteInfo = "acc_gyro_HB_Test WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1CD0A6051BA753FB00F6AC33 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1CD0A5F11BA753FB00F6AC33 /* acc_gyro_HB_Test WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CD0A6091BA753FB00F6AC33 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				1CD0A5E21BA753FB00F6AC33 /* acc_gyro_HB_Test WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1C0493E51BA9F39E003145D2 /* InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		1CD0A5CF1BA753FB00F6AC33 /* acc_gyro_HB_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = acc_gyro_HB_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CD0A5D21BA753FB00F6AC33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1CD0A5D41BA753FB00F6AC33 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1CD0A5D71BA753FB00F6AC33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1CD0A5D91BA753FB00F6AC33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1CD0A5DC1BA753FB00F6AC33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1CD0A5DE1BA753FB00F6AC33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CD0A5E11BA753FB00F6AC33 /* acc_gyro_HB_Test WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "acc_gyro_HB_Test WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CD0A5E71BA753FB00F6AC33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		1CD0A5E91BA753FB00F6AC33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1CD0A5EB1BA753FB00F6AC33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CD0A5F01BA753FB00F6AC33 /* acc_gyro_HB_Test WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "acc_gyro_HB_Test WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CD0A5F61BA753FB00F6AC33 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		1CD0A5F71BA753FB00F6AC33 /* MotionReadings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionReadings.swift; sourceTree = "<group>"; };
+		1CD0A5F91BA753FB00F6AC33 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		1CD0A5FB1BA753FB00F6AC33 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		1CD0A5FD1BA753FB00F6AC33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1CD0A5FF1BA753FB00F6AC33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CEAACBE1BA9AE050075A53A /* HealthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
+		1CEAACC01BA9D0010075A53A /* HealthHeartRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthHeartRate.swift; sourceTree = "<group>"; };
+		1CEED4791BA86F6F00B75817 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		1CEED47B1BA86F6F00B75817 /* acc_gyro_HB_Test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = acc_gyro_HB_Test.entitlements; sourceTree = "<group>"; };
+		1CEED47C1BA8708100B75817 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.0.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		1CEED47E1BA8708100B75817 /* acc_gyro_HB_Test WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "acc_gyro_HB_Test WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1CD0A5CC1BA753FB00F6AC33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CEED47A1BA86F6F00B75817 /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CD0A5ED1BA753FB00F6AC33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CEED47D1BA8708100B75817 /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1CD0A5C61BA753FB00F6AC33 = {
+			isa = PBXGroup;
+			children = (
+				1CEED47C1BA8708100B75817 /* HealthKit.framework */,
+				1CEED4791BA86F6F00B75817 /* HealthKit.framework */,
+				1CD0A5D11BA753FB00F6AC33 /* acc_gyro_HB_Test */,
+				1CD0A5E51BA753FB00F6AC33 /* acc_gyro_HB_Test WatchKit App */,
+				1CD0A5F41BA753FB00F6AC33 /* acc_gyro_HB_Test WatchKit Extension */,
+				1CD0A5D01BA753FB00F6AC33 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1CD0A5D01BA753FB00F6AC33 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1CD0A5CF1BA753FB00F6AC33 /* acc_gyro_HB_Test.app */,
+				1CD0A5E11BA753FB00F6AC33 /* acc_gyro_HB_Test WatchKit App.app */,
+				1CD0A5F01BA753FB00F6AC33 /* acc_gyro_HB_Test WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1CD0A5D11BA753FB00F6AC33 /* acc_gyro_HB_Test */ = {
+			isa = PBXGroup;
+			children = (
+				1CEED47B1BA86F6F00B75817 /* acc_gyro_HB_Test.entitlements */,
+				1CD0A5D21BA753FB00F6AC33 /* AppDelegate.swift */,
+				1CD0A5D41BA753FB00F6AC33 /* ViewController.swift */,
+				1CD0A5D61BA753FB00F6AC33 /* Main.storyboard */,
+				1CD0A5D91BA753FB00F6AC33 /* Assets.xcassets */,
+				1CD0A5DB1BA753FB00F6AC33 /* LaunchScreen.storyboard */,
+				1CD0A5DE1BA753FB00F6AC33 /* Info.plist */,
+			);
+			path = acc_gyro_HB_Test;
+			sourceTree = "<group>";
+		};
+		1CD0A5E51BA753FB00F6AC33 /* acc_gyro_HB_Test WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				1CD0A5E61BA753FB00F6AC33 /* Interface.storyboard */,
+				1CD0A5E91BA753FB00F6AC33 /* Assets.xcassets */,
+				1CD0A5EB1BA753FB00F6AC33 /* Info.plist */,
+			);
+			path = "acc_gyro_HB_Test WatchKit App";
+			sourceTree = "<group>";
+		};
+		1CD0A5F41BA753FB00F6AC33 /* acc_gyro_HB_Test WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1CEED47E1BA8708100B75817 /* acc_gyro_HB_Test WatchKit Extension.entitlements */,
+				1C0493E51BA9F39E003145D2 /* InterfaceController.swift */,
+				1CD0A5F71BA753FB00F6AC33 /* MotionReadings.swift */,
+				1CEAACC01BA9D0010075A53A /* HealthHeartRate.swift */,
+				1CEAACBE1BA9AE050075A53A /* HealthManager.swift */,
+				1CD0A5F91BA753FB00F6AC33 /* ExtensionDelegate.swift */,
+				1CD0A5FB1BA753FB00F6AC33 /* NotificationController.swift */,
+				1CD0A5FD1BA753FB00F6AC33 /* Assets.xcassets */,
+				1CD0A5FF1BA753FB00F6AC33 /* Info.plist */,
+				1CD0A5F51BA753FB00F6AC33 /* Supporting Files */,
+			);
+			path = "acc_gyro_HB_Test WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		1CD0A5F51BA753FB00F6AC33 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1CD0A5F61BA753FB00F6AC33 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1CD0A5CE1BA753FB00F6AC33 /* acc_gyro_HB_Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CD0A60A1BA753FB00F6AC33 /* Build configuration list for PBXNativeTarget "acc_gyro_HB_Test" */;
+			buildPhases = (
+				1CD0A5CB1BA753FB00F6AC33 /* Sources */,
+				1CD0A5CC1BA753FB00F6AC33 /* Frameworks */,
+				1CD0A5CD1BA753FB00F6AC33 /* Resources */,
+				1CD0A6091BA753FB00F6AC33 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1CD0A5E41BA753FB00F6AC33 /* PBXTargetDependency */,
+			);
+			name = acc_gyro_HB_Test;
+			productName = acc_gyro_HB_Test;
+			productReference = 1CD0A5CF1BA753FB00F6AC33 /* acc_gyro_HB_Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1CD0A5E01BA753FB00F6AC33 /* acc_gyro_HB_Test WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CD0A6061BA753FB00F6AC33 /* Build configuration list for PBXNativeTarget "acc_gyro_HB_Test WatchKit App" */;
+			buildPhases = (
+				1CD0A5DF1BA753FB00F6AC33 /* Resources */,
+				1CD0A6051BA753FB00F6AC33 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1CD0A5F31BA753FB00F6AC33 /* PBXTargetDependency */,
+			);
+			name = "acc_gyro_HB_Test WatchKit App";
+			productName = "acc_gyro_HB_Test WatchKit App";
+			productReference = 1CD0A5E11BA753FB00F6AC33 /* acc_gyro_HB_Test WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		1CD0A5EF1BA753FB00F6AC33 /* acc_gyro_HB_Test WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CD0A6021BA753FB00F6AC33 /* Build configuration list for PBXNativeTarget "acc_gyro_HB_Test WatchKit Extension" */;
+			buildPhases = (
+				1CD0A5EC1BA753FB00F6AC33 /* Sources */,
+				1CD0A5ED1BA753FB00F6AC33 /* Frameworks */,
+				1CD0A5EE1BA753FB00F6AC33 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "acc_gyro_HB_Test WatchKit Extension";
+			productName = "acc_gyro_HB_Test WatchKit Extension";
+			productReference = 1CD0A5F01BA753FB00F6AC33 /* acc_gyro_HB_Test WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1CD0A5C71BA753FB00F6AC33 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Thingee Corporation";
+				TargetAttributes = {
+					1CD0A5CE1BA753FB00F6AC33 = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = XZ68U24SK8;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
+					};
+					1CD0A5E01BA753FB00F6AC33 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					1CD0A5EF1BA753FB00F6AC33 = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = XZ68U24SK8;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 1CD0A5CA1BA753FB00F6AC33 /* Build configuration list for PBXProject "acc_gyro_HB_Test" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1CD0A5C61BA753FB00F6AC33;
+			productRefGroup = 1CD0A5D01BA753FB00F6AC33 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1CD0A5CE1BA753FB00F6AC33 /* acc_gyro_HB_Test */,
+				1CD0A5E01BA753FB00F6AC33 /* acc_gyro_HB_Test WatchKit App */,
+				1CD0A5EF1BA753FB00F6AC33 /* acc_gyro_HB_Test WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1CD0A5CD1BA753FB00F6AC33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CD0A5DD1BA753FB00F6AC33 /* LaunchScreen.storyboard in Resources */,
+				1CD0A5DA1BA753FB00F6AC33 /* Assets.xcassets in Resources */,
+				1CD0A5D81BA753FB00F6AC33 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CD0A5DF1BA753FB00F6AC33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CD0A5EA1BA753FB00F6AC33 /* Assets.xcassets in Resources */,
+				1CD0A5E81BA753FB00F6AC33 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CD0A5EE1BA753FB00F6AC33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CD0A5FE1BA753FB00F6AC33 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1CD0A5CB1BA753FB00F6AC33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CD0A5D51BA753FB00F6AC33 /* ViewController.swift in Sources */,
+				1CD0A5D31BA753FB00F6AC33 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CD0A5EC1BA753FB00F6AC33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CD0A5FC1BA753FB00F6AC33 /* NotificationController.swift in Sources */,
+				1CD0A5FA1BA753FB00F6AC33 /* ExtensionDelegate.swift in Sources */,
+				1CD0A5F81BA753FB00F6AC33 /* MotionReadings.swift in Sources */,
+				1C0493E61BA9F39E003145D2 /* InterfaceController.swift in Sources */,
+				1CEAACC11BA9D0010075A53A /* HealthHeartRate.swift in Sources */,
+				1CEAACBF1BA9AE050075A53A /* HealthManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1CD0A5E41BA753FB00F6AC33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1CD0A5E01BA753FB00F6AC33 /* acc_gyro_HB_Test WatchKit App */;
+			targetProxy = 1CD0A5E31BA753FB00F6AC33 /* PBXContainerItemProxy */;
+		};
+		1CD0A5F31BA753FB00F6AC33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1CD0A5EF1BA753FB00F6AC33 /* acc_gyro_HB_Test WatchKit Extension */;
+			targetProxy = 1CD0A5F21BA753FB00F6AC33 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1CD0A5D61BA753FB00F6AC33 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1CD0A5D71BA753FB00F6AC33 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1CD0A5DB1BA753FB00F6AC33 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1CD0A5DC1BA753FB00F6AC33 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		1CD0A5E61BA753FB00F6AC33 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1CD0A5E71BA753FB00F6AC33 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1CD0A6001BA753FB00F6AC33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1CD0A6011BA753FB00F6AC33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1CD0A6031BA753FB00F6AC33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "acc_gyro_HB_Test WatchKit Extension/acc_gyro_HB_Test WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "acc_gyro_HB_Test WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Thingee.acc-gyro-HB-Test.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		1CD0A6041BA753FB00F6AC33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "acc_gyro_HB_Test WatchKit Extension/acc_gyro_HB_Test WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "acc_gyro_HB_Test WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Thingee.acc-gyro-HB-Test.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		1CD0A6071BA753FB00F6AC33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = acc_gyro_HB_Test_WatchKit_Extension;
+				INFOPLIST_FILE = "acc_gyro_HB_Test WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "Thingee.acc-gyro-HB-Test.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		1CD0A6081BA753FB00F6AC33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = acc_gyro_HB_Test_WatchKit_Extension;
+				INFOPLIST_FILE = "acc_gyro_HB_Test WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "Thingee.acc-gyro-HB-Test.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		1CD0A60B1BA753FB00F6AC33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = acc_gyro_HB_Test/acc_gyro_HB_Test.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = acc_gyro_HB_Test/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Thingee.acc-gyro-HB-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		1CD0A60C1BA753FB00F6AC33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = acc_gyro_HB_Test/acc_gyro_HB_Test.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = acc_gyro_HB_Test/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Thingee.acc-gyro-HB-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1CD0A5CA1BA753FB00F6AC33 /* Build configuration list for PBXProject "acc_gyro_HB_Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CD0A6001BA753FB00F6AC33 /* Debug */,
+				1CD0A6011BA753FB00F6AC33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1CD0A6021BA753FB00F6AC33 /* Build configuration list for PBXNativeTarget "acc_gyro_HB_Test WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CD0A6031BA753FB00F6AC33 /* Debug */,
+				1CD0A6041BA753FB00F6AC33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1CD0A6061BA753FB00F6AC33 /* Build configuration list for PBXNativeTarget "acc_gyro_HB_Test WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CD0A6071BA753FB00F6AC33 /* Debug */,
+				1CD0A6081BA753FB00F6AC33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1CD0A60A1BA753FB00F6AC33 /* Build configuration list for PBXNativeTarget "acc_gyro_HB_Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CD0A60B1BA753FB00F6AC33 /* Debug */,
+				1CD0A60C1BA753FB00F6AC33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1CD0A5C71BA753FB00F6AC33 /* Project object */;
+}
