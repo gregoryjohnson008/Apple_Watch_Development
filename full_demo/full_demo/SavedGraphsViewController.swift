@@ -49,21 +49,6 @@ class SavedGraphsViewController: UIViewController
     {
         super.viewDidAppear(animated)
         
-        var order:Int = 0
-        
-        // Determines order of fading in. Starts from the right most digit
-        switch graph.saveToInd
-        {
-        case 1:
-            order = 231//132
-        case 2:
-            order = 312//213
-        case 0:
-            order = 123//321
-        default:
-            print("Something went wrong")
-        }
-        
         UIView.animateWithDuration(1.0, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
         
             if(graph.graphNum < 1)
@@ -72,93 +57,28 @@ class SavedGraphsViewController: UIViewController
                 self.graph2.alpha = 1
                 self.graph3.alpha = 1
             }
-            else if(graph.graphNum < 2)
-            {
-                self.graph1.alpha = 1
-            }
-            else if(graph.graphNum < 3)
-            {
-                self.graph2.alpha = 1
-            }
             else
             {
-                switch (order%10)
-                {
-                case 1:
-                    self.graph1.alpha = 1
-                case 2:
-                    self.graph2.alpha = 1
-                case 3:
-                    self.graph3.alpha = 1
-                default:
-                    print("Bad number")
-                }
-            
-                order = Int(order / 10)
+                self.graph1.alpha = 1
             }
         
         }, completion: { (finished: Bool) -> Void in
             UIView.animateWithDuration(1.0, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
                 
-                if(graph.graphNum < 1)
-                {
-                    //nothing more to do
-                }
-                else if(graph.graphNum < 2)
+                if(graph.graphNum < 2)
                 {
                     self.graph2.alpha = 1
                     self.graph3.alpha = 1
                 }
-                else if(graph.graphNum < 3)
-                {
-                    self.graph1.alpha = 1
-                }
                 else
                 {
-                    switch (order%10)
-                    {
-                    case 1:
-                        self.graph1.alpha = 1
-                    case 2:
-                        self.graph2.alpha = 1
-                    case 3:
-                        self.graph3.alpha = 1
-                    default:
-                        print("Bad number")
-                    }
-                    
-                    order = Int(order/10)
+                    self.graph2.alpha = 1
                 }
                 
                 }, completion: { (finished: Bool) -> Void in
                     UIView.animateWithDuration(1.0, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
                         
-                        if(graph.graphNum < 1)
-                        {
-                            //nothing more to do
-                        }
-                        else if(graph.graphNum < 2)
-                        {
-                            //nothing more to do
-                        }
-                        else if(graph.graphNum < 3)
-                        {
-                            self.graph3.alpha = 1
-                        }
-                        else
-                        {
-                            switch order
-                            {
-                            case 1:
-                                self.graph1.alpha = 1
-                            case 2:
-                                self.graph2.alpha = 1
-                            case 3:
-                                self.graph3.alpha = 1
-                            default:
-                                print("Bad number")
-                            }
-                        }
+                        self.graph3.alpha = 1
                         
                         }, completion: { (finished: Bool) -> Void in
                             print("all have faded in")
@@ -177,31 +97,23 @@ class SavedGraphsViewController: UIViewController
         // Labels
         if(graph.graphNum > 0)
         {
-            switch graph.saveToInd
+            self.graphTitle1.text = graph.dates[0]!
+            if(graph.graphNum > 1)
             {
-            case 1:
-                self.graphTitle1.text = "Graph \(graph.graphNum)"
-                if(graph.graphNum > 1) {self.graphTitle3.text = "Graph \(graph.graphNum - 1)"}
-                if(graph.graphNum > 2) {self.graphTitle2.text = "Graph \(graph.graphNum - 2)"}
-            case 2:
-                self.graphTitle2.text = "Graph \(graph.graphNum)"
-                if(graph.graphNum > 1) {self.graphTitle1.text = "Graph \(graph.graphNum - 1)"}
-                if(graph.graphNum > 2) {self.graphTitle3.text = "Graph \(graph.graphNum - 2)"}
-            case 0:
-                self.graphTitle3.text = "Graph \(graph.graphNum)"
-                if(graph.graphNum > 1) {self.graphTitle2.text = "Graph \(graph.graphNum - 1)"}
-                if(graph.graphNum > 2) {self.graphTitle1.text = "Graph \(graph.graphNum - 2)"}
-            default:
-                print("Index is WRONG")
+                self.graphTitle2.text = graph.dates[1]!
+                if(graph.graphNum > 2)
+                {
+                    self.graphTitle3.text = graph.dates[2]!
+                }
             }
-            
-            graph1Max.text = "\(graph.g1Max)"
-            graph1Min.text = "\(graph.g1Min)"
-            graph2Max.text = "\(graph.g2Max)"
-            graph2Min.text = "\(graph.g2Min)"
-            graph3Max.text = "\(graph.g3Max)"
-            graph3Min.text = "\(graph.g3Min)"
         }
+        
+        graph1Max.text = "\(graph.maxMin[0][0])"
+        graph1Min.text = "\(graph.maxMin[0][1])"
+        graph2Max.text = "\(graph.maxMin[1][0])"
+        graph2Min.text = "\(graph.maxMin[1][1])"
+        graph3Max.text = "\(graph.maxMin[2][0])"
+        graph3Min.text = "\(graph.maxMin[2][1])"
         
     }
     

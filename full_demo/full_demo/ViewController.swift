@@ -75,24 +75,20 @@ class ViewController: UIViewController, WCSessionDelegate {
         }
         else if(data == -1) //save graph
         {
-            graph.savedGraphs.insert(graph.points, atIndex: graph.saveToInd)
-            switch graph.saveToInd
-            {
-            case 0:
-                graph.g1Max = graph.points.maxElement()!
-                graph.g1Min = graph.points.minElement()!
-            case 1:
-                graph.g2Max = graph.points.maxElement()!
-                graph.g2Min = graph.points.minElement()!
-            case 2:
-                graph.g3Max = graph.points.maxElement()!
-                graph.g3Min = graph.points.minElement()!
-            default:
-                print("Index is an invalid number")
-            }
-            graph.savedGraphs.removeAtIndex(graph.saveToInd + 1) //saveToInd has been increased since inserting
-            graph.saveToInd = (graph.saveToInd + 1) % 3
-            graph.graphNum += 1
+            graph.savedGraphs.insert(graph.points, atIndex: 0) //insert at beginning
+            graph.savedGraphs.removeAtIndex(2) //remove last element
+            
+            let date = NSDate()
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "EEE, dd MMM HH:mm:ss"
+            let dateString = dateFormatter.stringFromDate(date)
+            graph.dates.insert(dateString, atIndex: 0) //insert at beginning
+            graph.dates.removeAtIndex(2) //remove last element
+            
+            graph.maxMin.insert([graph.points.maxElement()!, graph.points.minElement()!], atIndex: 0) //insert at beginning
+            graph.maxMin.removeAtIndex(2) //remove last element
+            
+            graph.graphNum += 1 //keep track of how many graphs have been saved
         }
         else if(data == -5) //clear graph
         {

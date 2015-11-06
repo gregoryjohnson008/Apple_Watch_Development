@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8092"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9019"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -15,10 +15,248 @@
                                 <segue destination="iI7-BH-DLO" kind="push" id="Ane-aR-K6c"/>
                             </connections>
                         </button>
+                        <button width="1" alignment="left" title="Medications" id="sQ7-Jn-G9k">
+                            <connections>
+                                <segue destination="QmN-yH-h7E" kind="push" id="RB4-pZ-7vp"/>
+                            </connections>
+                        </button>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="235" y="347"/>
+            <point key="canvasLocation" x="202" y="294"/>
+        </scene>
+        <!--Medications-->
+        <scene sceneID="DbI-Q1-5KU">
+            <objects>
+                <controller identifier="medicationController" title="Medications" id="QmN-yH-h7E" customClass="MedicationsController" customModule="full_demo_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="46e-7q-9ah">
+                            <items>
+                                <tableRow identifier="firstRow" id="2my-69-o1K" customClass="firstRowController" customModule="full_demo_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="bNN-E3-XK1">
+                                        <items>
+                                            <imageView width="0.20000000000000001" height="1" alignment="right" contentMode="scaleAspectFit" id="p9e-Kc-GH2"/>
+                                            <label width="0.80000000000000004" height="1" alignment="left" text="Label" numberOfLines="3" id="haY-3u-qyo"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="image" destination="p9e-Kc-GH2" id="8U2-PB-baL"/>
+                                        <outlet property="label" destination="haY-3u-qyo" id="UaC-3P-HqY"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <menu key="menu" id="gqu-vt-ErD">
+                        <items>
+                            <menuItem title="Add item" icon="add" id="S3D-bH-Qbg">
+                                <connections>
+                                    <action selector="addItem" destination="QmN-yH-h7E" id="kMN-Hr-u8I"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Remove item" icon="trash" id="y9G-na-IAK">
+                                <connections>
+                                    <action selector="removeItem" destination="QmN-yH-h7E" id="94N-jh-9NQ"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="table" destination="46e-7q-9ah" id="n1c-Nr-DMJ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="360" y="535"/>
+        </scene>
+        <!--viewController-->
+        <scene sceneID="lgC-m2-YTc">
+            <objects>
+                <controller identifier="viewController" id="cd6-HP-bwu" customClass="ViewItemController" customModule="full_demo_WatchKit_Extension">
+                    <items>
+                        <label width="1" height="0.14999999999999999" alignment="left" text="First reminder:" textAlignment="center" id="XH4-nV-pd1">
+                            <fontDescription key="font" type="system" pointSize="15"/>
+                        </label>
+                        <group width="1" height="0.40000000000000002" alignment="left" id="afM-aY-UJp">
+                            <items>
+                                <picker width="0.40000000000000002" height="1" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="na4-uT-ikM">
+                                    <connections>
+                                        <action selector="hourPickerChanged:" destination="cd6-HP-bwu" id="Lbc-x3-afo"/>
+                                    </connections>
+                                </picker>
+                                <label width="0.20000000000000001" height="1" alignment="left" text=":" textAlignment="center" id="V9Y-CQ-KmN">
+                                    <fontDescription key="font" type="system" pointSize="45"/>
+                                </label>
+                                <picker width="0.40000000000000002" height="1" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="OgK-iv-bkg">
+                                    <connections>
+                                        <action selector="minutePickerChanged:" destination="cd6-HP-bwu" id="Qjs-b2-J4a"/>
+                                    </connections>
+                                </picker>
+                            </items>
+                        </group>
+                        <separator alignment="left" id="5Fs-sg-fc4"/>
+                        <group width="1" height="0.40000000000000002" alignment="left" id="V00-2K-Zes">
+                            <items>
+                                <label width="0.69999999999999996" height="1" alignment="left" text="Remind after how many hours:" numberOfLines="3" id="H5z-5Y-sAB">
+                                    <fontDescription key="font" type="system" pointSize="13"/>
+                                </label>
+                                <picker width="0.29999999999999999" height="1" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="fg6-Po-z95">
+                                    <connections>
+                                        <action selector="intervalPickerChanged:" destination="cd6-HP-bwu" id="0Dr-hq-wcI"/>
+                                    </connections>
+                                </picker>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="bottomLabel" destination="H5z-5Y-sAB" id="Y3d-sK-ebe"/>
+                        <outlet property="hourPicker" destination="na4-uT-ikM" id="Y4o-DO-E0P"/>
+                        <outlet property="intervalPicker" destination="fg6-Po-z95" id="5I5-vx-Q7i"/>
+                        <outlet property="minutePicker" destination="OgK-iv-bkg" id="4Q0-3A-3oz"/>
+                        <outlet property="topLabel" destination="XH4-nV-pd1" id="NcA-Z4-fgy"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="534" y="288"/>
+        </scene>
+        <!--Add Item-->
+        <scene sceneID="kVA-hc-fVh">
+            <objects>
+                <controller identifier="addItemToList" title="Add Item" id="JNW-Di-fda" customClass="addItemController" customModule="full_demo_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="0.5" alignment="left" id="IAt-Dr-582">
+                            <items>
+                                <picker width="0.20000000000000001" height="1" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="Cd5-8b-4LK">
+                                    <connections>
+                                        <action selector="picker1:" destination="JNW-Di-fda" id="Bxe-hg-KKc"/>
+                                    </connections>
+                                </picker>
+                                <picker width="0.20000000000000001" height="1" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="m5p-DF-hST">
+                                    <connections>
+                                        <action selector="picker2:" destination="JNW-Di-fda" id="5Hz-7Y-6wx"/>
+                                    </connections>
+                                </picker>
+                                <picker width="0.20000000000000001" height="1" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="48x-zG-tSg">
+                                    <connections>
+                                        <action selector="picker3:" destination="JNW-Di-fda" id="2gZ-JP-MXs"/>
+                                    </connections>
+                                </picker>
+                                <picker width="0.20000000000000001" height="1" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="iqg-xS-g3J">
+                                    <connections>
+                                        <action selector="picker4:" destination="JNW-Di-fda" id="tQV-cP-z5e"/>
+                                    </connections>
+                                </picker>
+                                <picker width="0.20000000000000001" height="1" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="HgF-Cl-GZh">
+                                    <connections>
+                                        <action selector="picker5:" destination="JNW-Di-fda" id="uVZ-oQ-2ya"/>
+                                    </connections>
+                                </picker>
+                            </items>
+                        </group>
+                        <picker height="0.29999999999999999" alignment="left" focusStyle="sequence" indicatorMode="shownWhileFocused" id="A6E-ao-yta">
+                            <connections>
+                                <action selector="pickerColor:" destination="JNW-Di-fda" id="fuT-mI-2qL"/>
+                            </connections>
+                        </picker>
+                        <button width="1" height="0.20000000000000001" alignment="left" title="Add Schedule" id="xZt-Ao-PGL">
+                            <connections>
+                                <action selector="addSchedule" destination="JNW-Di-fda" id="3QL-8Z-UPp"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="colorPicker" destination="A6E-ao-yta" id="GEF-kw-rsX"/>
+                        <outlet property="letter1" destination="Cd5-8b-4LK" id="ZYd-uG-Ny4"/>
+                        <outlet property="letter2" destination="m5p-DF-hST" id="dSD-Oz-Kud"/>
+                        <outlet property="letter3" destination="48x-zG-tSg" id="Uk0-C1-5GR"/>
+                        <outlet property="letter4" destination="iqg-xS-g3J" id="s8g-Eb-qHZ"/>
+                        <outlet property="letter5" destination="HgF-Cl-GZh" id="CXI-TS-Lsh"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="534" y="534.5"/>
+        </scene>
+        <!--Schedule-->
+        <scene sceneID="O1m-Kf-iY2">
+            <objects>
+                <controller identifier="scheduleController" title="Schedule" id="J4S-MH-Osg" customClass="ScheduleController" customModule="full_demo_WatchKit_Extension">
+                    <items>
+                        <button width="1" height="0.25" alignment="left" title="Hourly" id="BLc-My-Tma">
+                            <connections>
+                                <action selector="hourlyHit" destination="J4S-MH-Osg" id="wzp-Mp-7sH"/>
+                            </connections>
+                        </button>
+                        <button width="1" height="0.25" alignment="left" title="Daily" id="w30-iX-tKg">
+                            <connections>
+                                <action selector="dailyHit" destination="J4S-MH-Osg" id="215-H8-o75"/>
+                            </connections>
+                        </button>
+                        <button width="1" height="0.25" alignment="left" title="Weekly" id="nWN-Re-Rwh">
+                            <connections>
+                                <action selector="weeklyHit" destination="J4S-MH-Osg" id="xog-Mb-hnM"/>
+                            </connections>
+                        </button>
+                        <label width="1" height="0.25" alignment="left" text="Choose frequency of reminder" textAlignment="center" numberOfLines="2" id="2zc-so-Zqr">
+                            <fontDescription key="font" type="system" pointSize="14"/>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="710" y="535.5"/>
+        </scene>
+        <!--Reminder-->
+        <scene sceneID="Kmc-Sf-Fzs">
+            <objects>
+                <controller identifier="reminderController" title="Reminder" id="Hzn-Lh-wqW" customClass="ReminderController" customModule="full_demo_WatchKit_Extension">
+                    <items>
+                        <label width="1" height="0.10000000000000001" alignment="left" text="First reminder at:" textAlignment="center" id="0ml-P1-kUN">
+                            <fontDescription key="font" type="system" pointSize="14"/>
+                        </label>
+                        <group width="1" height="0.29999999999999999" alignment="left" id="UFK-dX-qeP">
+                            <items>
+                                <picker width="0.40000000000000002" height="1" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="U6R-ht-H5n">
+                                    <connections>
+                                        <action selector="hourPickerChanged:" destination="Hzn-Lh-wqW" id="K1L-MF-Y6o"/>
+                                    </connections>
+                                </picker>
+                                <label width="0.20000000000000001" height="1" alignment="left" text=":" textAlignment="center" id="ZkA-nY-jfv">
+                                    <fontDescription key="font" type="system" pointSize="45"/>
+                                </label>
+                                <picker width="0.40000000000000002" height="1" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="Cvf-wp-Q7V">
+                                    <connections>
+                                        <action selector="minutePickerChanged:" destination="Hzn-Lh-wqW" id="mcT-bw-BJT"/>
+                                    </connections>
+                                </picker>
+                            </items>
+                        </group>
+                        <separator alignment="left" id="XD9-id-I3h"/>
+                        <group width="1" height="0.29999999999999999" alignment="left" id="1xy-A7-E0X">
+                            <items>
+                                <label width="0.69999999999999996" alignment="left" text="Remind after how many hours:" numberOfLines="3" id="R8h-Om-cr1">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                </label>
+                                <picker width="0.29999999999999999" height="1" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="V6u-RU-jzF">
+                                    <connections>
+                                        <action selector="intervalPickerChanged:" destination="Hzn-Lh-wqW" id="HKg-fN-EYZ"/>
+                                    </connections>
+                                </picker>
+                            </items>
+                        </group>
+                        <button width="1" height="0.29999999999999999" alignment="left" title="Done" id="fBE-DK-s21">
+                            <connections>
+                                <action selector="doneClicked" destination="Hzn-Lh-wqW" id="TnC-t1-bPI"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="bottomLabel" destination="R8h-Om-cr1" id="Tmc-jf-eZW"/>
+                        <outlet property="hourPicker" destination="U6R-ht-H5n" id="hP6-Ed-gen"/>
+                        <outlet property="intervalPicker" destination="V6u-RU-jzF" id="eH7-Di-vbR"/>
+                        <outlet property="minutePicker" destination="Cvf-wp-Q7V" id="yfY-PZ-A79"/>
+                        <outlet property="topLabel" destination="0ml-P1-kUN" id="3qj-xW-48i"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="889" y="537"/>
         </scene>
         <!--Health Heart Rate Controller-->
         <scene sceneID="TUT-7C-lSB">
@@ -78,7 +316,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="477" y="347"/>
+            <point key="canvasLocation" x="360" y="51"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
@@ -91,7 +329,7 @@
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
                 </glanceController>
             </objects>
-            <point key="canvasLocation" x="235" y="672"/>
+            <point key="canvasLocation" x="202" y="766"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -107,14 +345,14 @@
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="235" y="1001"/>
+            <point key="canvasLocation" x="202" y="1021"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="KIl-fV-djm">
             <objects>
                 <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="full_demo_WatchKit_App" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="553" y="1001"/>
+            <point key="canvasLocation" x="534" y="1021"/>
         </scene>
     </scenes>
 </document>

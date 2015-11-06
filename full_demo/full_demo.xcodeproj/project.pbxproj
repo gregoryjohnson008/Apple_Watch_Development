@@ -25,13 +25,20 @@
 		1C41E2481BC6CC4700F0B13F /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C41E2471BC6CC4700F0B13F /* GlanceController.swift */; };
 		1C41E24A1BC6CC4700F0B13F /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C41E2491BC6CC4700F0B13F /* ComplicationController.swift */; };
 		1C41E24C1BC6CC4700F0B13F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C41E24B1BC6CC4700F0B13F /* Assets.xcassets */; };
-		1C41E2641BC6D1FF00F0B13F /* graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C41E2621BC6D1FF00F0B13F /* graph.swift */; settings = {ASSET_TAGS = (); }; };
-		1C41E2651BC6D1FF00F0B13F /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C41E2631BC6D1FF00F0B13F /* GraphView.swift */; settings = {ASSET_TAGS = (); }; };
-		1C41E2671BC6DFEA00F0B13F /* HealthHeartRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C41E2661BC6DFEA00F0B13F /* HealthHeartRate.swift */; settings = {ASSET_TAGS = (); }; };
-		1C7C17071BCD5C8D007461B9 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C17061BCD5C8D007461B9 /* TransitionManager.swift */; settings = {ASSET_TAGS = (); }; };
-		1C7C17091BCD5EF7007461B9 /* SavedGraphsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C17081BCD5EF7007461B9 /* SavedGraphsViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		1C7C170D1BCD6CF7007461B9 /* SavedGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C170C1BCD6CF7007461B9 /* SavedGraph.swift */; settings = {ASSET_TAGS = (); }; };
-		1C7C17131BCD8012007461B9 /* workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C17121BCD8012007461B9 /* workout.swift */; settings = {ASSET_TAGS = (); }; };
+		1C41E2641BC6D1FF00F0B13F /* graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C41E2621BC6D1FF00F0B13F /* graph.swift */; };
+		1C41E2651BC6D1FF00F0B13F /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C41E2631BC6D1FF00F0B13F /* GraphView.swift */; };
+		1C41E2671BC6DFEA00F0B13F /* HealthHeartRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C41E2661BC6DFEA00F0B13F /* HealthHeartRate.swift */; };
+		1C578EFD1BE1172D00E458C9 /* MedicationsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C578EFC1BE1172D00E458C9 /* MedicationsInterfaceController.swift */; };
+		1C578EFF1BE1365900E458C9 /* firstRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C578EFE1BE1365900E458C9 /* firstRowController.swift */; };
+		1C578F011BE1399700E458C9 /* tableObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C578F001BE1399700E458C9 /* tableObjects.swift */; };
+		1C578F031BE15B7D00E458C9 /* addItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C578F021BE15B7D00E458C9 /* addItemViewController.swift */; };
+		1C7C17071BCD5C8D007461B9 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C17061BCD5C8D007461B9 /* TransitionManager.swift */; };
+		1C7C17091BCD5EF7007461B9 /* SavedGraphsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C17081BCD5EF7007461B9 /* SavedGraphsViewController.swift */; };
+		1C7C170D1BCD6CF7007461B9 /* SavedGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C170C1BCD6CF7007461B9 /* SavedGraph.swift */; };
+		1C7C17131BCD8012007461B9 /* workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C17121BCD8012007461B9 /* workout.swift */; };
+		1C8763F61BE94D1F00C36D06 /* viewItemInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8763F51BE94D1F00C36D06 /* viewItemInterfaceController.swift */; };
+		F30F492C1BE261B9002FE3C5 /* scheduleViewControlller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30F492B1BE261B9002FE3C5 /* scheduleViewControlller.swift */; };
+		F30F492E1BE28769002FE3C5 /* reminderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30F492D1BE28769002FE3C5 /* reminderController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,10 +121,17 @@
 		1C41E2621BC6D1FF00F0B13F /* graph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = graph.swift; sourceTree = "<group>"; };
 		1C41E2631BC6D1FF00F0B13F /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		1C41E2661BC6DFEA00F0B13F /* HealthHeartRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthHeartRate.swift; sourceTree = "<group>"; };
+		1C578EFC1BE1172D00E458C9 /* MedicationsInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationsInterfaceController.swift; sourceTree = "<group>"; };
+		1C578EFE1BE1365900E458C9 /* firstRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = firstRowController.swift; sourceTree = "<group>"; };
+		1C578F001BE1399700E458C9 /* tableObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tableObjects.swift; sourceTree = "<group>"; };
+		1C578F021BE15B7D00E458C9 /* addItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addItemViewController.swift; sourceTree = "<group>"; };
 		1C7C17061BCD5C8D007461B9 /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 		1C7C17081BCD5EF7007461B9 /* SavedGraphsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedGraphsViewController.swift; sourceTree = "<group>"; };
 		1C7C170C1BCD6CF7007461B9 /* SavedGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedGraph.swift; sourceTree = "<group>"; };
 		1C7C17121BCD8012007461B9 /* workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = workout.swift; sourceTree = "<group>"; };
+		1C8763F51BE94D1F00C36D06 /* viewItemInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = viewItemInterfaceController.swift; sourceTree = "<group>"; };
+		F30F492B1BE261B9002FE3C5 /* scheduleViewControlller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scheduleViewControlller.swift; sourceTree = "<group>"; };
+		F30F492D1BE28769002FE3C5 /* reminderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = reminderController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +228,13 @@
 			children = (
 				1C2F9A611BC6E92900AE45BA /* full_demo WatchKit Extension.entitlements */,
 				1C41E2661BC6DFEA00F0B13F /* HealthHeartRate.swift */,
+				1C578EFC1BE1172D00E458C9 /* MedicationsInterfaceController.swift */,
+				1C578F021BE15B7D00E458C9 /* addItemViewController.swift */,
+				F30F492B1BE261B9002FE3C5 /* scheduleViewControlller.swift */,
+				F30F492D1BE28769002FE3C5 /* reminderController.swift */,
+				1C8763F51BE94D1F00C36D06 /* viewItemInterfaceController.swift */,
+				1C578EFE1BE1365900E458C9 /* firstRowController.swift */,
+				1C578F001BE1399700E458C9 /* tableObjects.swift */,
 				1C7C17121BCD8012007461B9 /* workout.swift */,
 				1C41E2411BC6CC4700F0B13F /* InterfaceController.swift */,
 				1C41E2431BC6CC4700F0B13F /* ExtensionDelegate.swift */,
@@ -333,6 +354,7 @@
 					};
 					1C41E22A1BC6CC4700F0B13F = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = XZ68U24SK8;
 					};
 					1C41E2391BC6CC4700F0B13F = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -434,9 +456,16 @@
 				1C7C17131BCD8012007461B9 /* workout.swift in Sources */,
 				1C41E2441BC6CC4700F0B13F /* ExtensionDelegate.swift in Sources */,
 				1C41E24A1BC6CC4700F0B13F /* ComplicationController.swift in Sources */,
+				1C578EFD1BE1172D00E458C9 /* MedicationsInterfaceController.swift in Sources */,
 				1C41E2421BC6CC4700F0B13F /* InterfaceController.swift in Sources */,
 				1C41E2671BC6DFEA00F0B13F /* HealthHeartRate.swift in Sources */,
+				1C8763F61BE94D1F00C36D06 /* viewItemInterfaceController.swift in Sources */,
+				1C578F011BE1399700E458C9 /* tableObjects.swift in Sources */,
+				F30F492E1BE28769002FE3C5 /* reminderController.swift in Sources */,
+				F30F492C1BE261B9002FE3C5 /* scheduleViewControlller.swift in Sources */,
+				1C578EFF1BE1365900E458C9 /* firstRowController.swift in Sources */,
 				1C41E2481BC6CC4700F0B13F /* GlanceController.swift in Sources */,
+				1C578F031BE15B7D00E458C9 /* addItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,6 +642,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = full_demo_WatchKit_Extension;
 				INFOPLIST_FILE = "full_demo WatchKit App/Info.plist";
@@ -629,6 +659,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = full_demo_WatchKit_Extension;
 				INFOPLIST_FILE = "full_demo WatchKit App/Info.plist";
